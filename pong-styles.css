@@ -38,7 +38,7 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(ellipse at right 34% bottom 5%, transparent 60%, #000000);
+  background: radial-gradient(ellipse at right 34% bottom 5%, transparent 80%, #000000);
   pointer-events: none;
   background-image: url("glitch.gif");
   background-size: cover;
