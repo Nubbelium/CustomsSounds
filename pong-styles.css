@@ -53,15 +53,15 @@ body::before {
 }
 
 #left-paddle {
-  background-color: rgb(253, 143, 100);
+  background-color: rgb(255, 0, 0);
   left: 10px;
   height: 25px;
 }
 
 #right-paddle {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(255, 255, 255);
   right: 10px;
-}
+} 
 
 #instructions {
   color: white;

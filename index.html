@@ -1,106 +1,56 @@
 <!DOCTYPE html>
-    <html>
-      <script type="module" src="/script.js"></script>
-    <head>
-        <meta charset="UTF-8">
-        <title>Assignment 1&2
-        </title>
-        <style>
+<html lang="en">
 
-        .katex-error {
-	      color: var(--vscode-editorError-foreground);
-        }
-        </style>  
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
-        <style>
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
-                font-size: 14px;
-                line-height: 1.6;
-            }
-        </style>
-        <style>
-        .task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
-        </style>
-        </head>
-        <body class="vscode-body vscode-light">
-        <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-        <link id="style1" rel="stylesheet" href="/style.css" />
-        </head>
+<head>
+    <title>Something is in your home.</title>
+    <script src="./javascript/Tone.js"></script>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href=./pong-styles.css>
 
-<!-- Additional things for writings:
-- <b> = orange bold
-- <q> = quote green
-- <h7> = Low opacity
-- #### = Slightly larger Text
-- ### = Very large Text
-- </br> = Line break
-- <a style="text-decoration:none" href="#" class="glitch" data-glitch="Text here"><i>Text Here </i></a> = Linked Text
- -->
-<!-- Start of the Text -->
-<main>
-<div>
-<h1 id="bandromedab-project-"><b>Assignment #1&2</b><!-- Title of Project --></h1>
-<h4 id="content-menu-"><i>Created by Jyrell Go</i></h4><!-- Title of Series --></h3>
-<p></br></br><h7><q>I had a lot of free time in the creation of of this assignment website, so I just had some fun with a old CRT TV asthetic. I hope you enjoy your stay!</q></h7> <!-- Interface instructions --></p>
-</div>
-<p><h7><q>!DISCLAIMER! All of the code written for this site is all written by me, with references to programming ideas from other people, This website is not in any way stolen and was just for simple experimentation </q></h7> <!-- Interface instructions --></p>
-</div>
-<h4 id="brbbackgroundb"></br><b>Image Description</b></h4>
+</head>
 
-</br><p>This image depicts the Limbo Boy ripping the final legs of the mother spider so that he could use its body to cross a spiked chasm (very cruel)</p>
+<body>
+    <center>
+        <p>Something is in your home... But you NEED to finish this game first.</p>
+        </br>
+        <div id="game">
+            <div class="paddle" id="left-paddle"></div>
+            <div class="paddle" id="right-paddle"></div>
+            <div class="ball" id="ball"></div>
+            <h1 class="score" id="left-score">0</h1>
+            <h1 class="score" id="right-score">0</h1 </div>
 
-</br><img src="./assets/unknown.png" alt="Limbo Killing the Mother Spider">
+            <div id="instructions">
+                <strong><span style="text-decoration:underline;">INSTRUCTIONS:</span></strong><br/>
+                <strong>W/S</strong> – move left paddle up/down<br/>
+                <strong>cursor up/down</strong> – move right paddle up/down</br>
+                <strong>R</strong> - reset</br>
+                <strong>1</strong> – cycle right paddle computer control</br>
+                <strong>2</strong> – toggle left paddle mouse control</br>
+                <strong>M</strong> – toggle mute sound</br>
+                <strong>N/B</strong> – volume up/down (0–10)</br>
+                </br>
 
-<h4 id="brbbackgroundb"></br><b>Assignment 1: Reflection</b></h4>
+            </div>
+            <div id="errors-debug">
+                <br/> Mouse control is <span id="mouse-control-state">OFF</span></br>
+                Mute is <span id="mute-state" >false</span><br/> 
+                <br/>
+                <p id="errors"></p>
+                DEBUG:<br/>
+                <p id="debug"></p>
+            
+            </div>
+            Computer control is <span id="computer-control-state">OFF</span></br>
+            Volume is <span id="volume-state">5</span> out of 10<br/>TIP: DON'T <b id="errors">LOSE</p>
+            <br/>
 
-</br><p>Instead of reflecting on the game itself, I want to talk about my experience with the scene that occurred in front of me. Throughout the entire course of the game until now, I saw the stillness of the world, the monsters, and most importantly the other children, out to kill my character. Through these experiences, I thought myself to be playing the role of an innocent boy simply trying to make it out alive.</p>
-</br><p>Due to this, I ended up placing a lot of myself in this boy's actions and motivations, akin to the concept of Lacan's Mirror; but the reason why this scene struck such strong emotion with me is the breaking of that phenomenon.</p>
-</br><p>So now to talk about this scene, what happened here is that the Limbo Boy realized that the only way to cross the spiked chasm is to rip the final leg off the spider and push its corpse into the hole; all to let him jump across. This was something I could not possibly expect the boy to do. No reason or motivation could've possibly justified this action within me, and at that moment it was the first time my reflection in him completely disappeared, in a complete shock, I think I felt forcefully ejected from the mirror phenomenon. It was quite an interesting thing to think about.</p></br></br>
+            <script type="module" src="./javascript/pong-audio.js"></script>
+            <script type="module" src="./javascript/pong-classes.js"></script>
+            <script type="module" src="./javascript/pong-events.js"></script>
+            <script type="module" src="./javascript/pong-util.js"></script>
+            <script type="module" src="./javascript/pong-index.js"></script>
+    </center>
+</body>
 
-<h4 id="brbbackgroundb"></br><b>Assignment 2: Thesis</b></h4>
-
-</br><p>Thesis: I believe the personal experience I've had with the game: Mirror Stage, is an essential experience. One that immerses oneself in the world of Limbo, and more importantly, the breaking such a phenomenon, the so-called "Forceful ejection" from the mirror is just as important as the immersion itself.</p>
-
-</br><p>As a quick summary, Lacan's theory of the mirror stage covers the 6 to 18 months of baby development. It's the exploration of identifying one's self in another. With the concept of "I" and "them" mixed, until development has reached the point where the child can distinguish from both. The concept itself introduces my theories about the differences between oneself and the world and people around them as well as the split between the ego and the body.</p>
-
-</br><p>It is not an exaggeration to say that immersion is one of the most important parts of Limbo's world, from the very beginning the game makes quite an active effort in order to get you to play the part of the Limbo Boy. Even without playing, one quick snapshot of its atmosphere is enough to let you feel this world.</p>
-
-</br></br><img src="./assets/picture1.png" alt="Atmosphere of Limbo">
-
-</br></br><p>Just a few examples of this immersion is in the danger that your character gets placed into, as well as the fade-out to black that occurs when your player dies. The dying of the eyes and the fading to black, as no cries from the boy are made, let you feel the cruelness of the world that your character is faced with and gets you rooting for him.</p>
-
-</br></br><img style="text-align: center" src="./assets/gif1.gif" alt="Death of Limbo Boy">
-
-</br></br><p>I found that this leads into this mindset of "How would I act in this situation" and once the player is put through something challenging, like running away from a mother spider, that is when the player is the most immersed. It's when fear of dying is the highest, and the cruel anxiety and eariness of the world truly impact not just the Limbo Boy, but the player controlling him.</p>
-</br><p>Now all of these things are merely just observations, but these observations lead to a more interesting conclusion once we start talking about the breaking of the immersion.</p>
-</br><p>While it is ideal that a game such as this one would try to keep its player immersed in its experience for its entirety, even the best games fail to meet such an impossible challenge. Some sections of puzzles or chases won't be able to hook everyone in, due to all players' individual uniqueness, but I think the Limbo developers realized this and took advantage of it.</p>
-</br><p>Through my playthrough of the game, I realized that the developers had attempted to recreate the experience I had described in the first assignment many more times throughout the entire game. And after finishing the game and seeing its very sad ending, I found the answer I was looking for.</p>
-
-</br><p>"The game makes itself stand out from most immersive narrative games because of how it plays with the immersion of the player, intentionally reconnecting and disconnecting the player from the world that they are experiencing." Here is another example for my Thesis:</p>
-
-</br></br><img style="text-align: center" src="./assets/picture2.png" alt="Death of Limbo Boy">
-</br></br><p>In this image, the player is faced with another potentially immersion-breaking situation, in order to move on, you must cruelly crush the children under a mechanical piston, killing them. While it's impossible to assume how the player will react exactly to the very cruel choice. I have a prediction on how most will interpret this.</p>
-
-</br><p>Either they will just continue, not batting an eye and seeing it like just another puzzle to complete; or have a similar reaction to what I had in the first assignment. What's important to understand is that both of these outcomes are beneficial for one gameplay experience. In the first, the player stays completely immersed in the world, and instead of being more like themselves, they start to jump into the role of the cruel Limbo boy, doing just about anything morally just to move on. While the other outcome is where I want to focus more on.</p>
-
-</br><p>In this second outcome, the player realizes what they have done, and loses their immersion with the Limbo Boy, covering the events that occurred to me in the first assignment. But there was something important in that reflection that was not covered, what happened after that scene. Well, here's what happened as a result of my "forceful ejection:" The shock from what I've just done makes me start regretting that decision I've made, and while it was horrible to do something like it, it was the only solution to the puzzle. This brings a whole rush of very powerful emotions such as confusion, disgust, and anxiety within my experience of the game. What's even more interesting than the emotions felt, is the fact that I was able to jump so quickly back into being immersed.</p>
-
-</br><p>Like I spoke earlier, the game makes it very easy to get immersed in, this includes getting reimmersed once you get "forcefully ejected". So with everything considered, the result of getting your immersion broken is that you can quickly get reimmersed in the world.</p>
-
-</br><p>This creates a very unique gameplay loop as I spoke of earlier, where the game actively tries anything to get you immersed and simultaneously "ejecting" you from the experience to get you to reflect on the choices you had to make to even get there in the first place. This effect is very akin to repeatedly creating the "breaking of the mirror phenomenon", to the complete benefit of the game.</p>
-
-</br></br><p><h7><q>Hewitson, O. (2010, September 13). What does Lacan say about... the mirror stage? – part I. What Does Lacan Say About… The Mirror Stage? Retrieved January 3, 2022, from https://www.lacanonline.com/2010/09/what-does-lacan-say-about-the-mirror-stage-part-i/</q></h7> <!-- Interface instructions --></p>
-
-
-</br></br></br></br>
-
-</main>
-</div>
-<div class="progress"></div>
-
-    </body>
-    </html>
+</html>
